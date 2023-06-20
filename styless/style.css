@@ -197,12 +197,12 @@ header{
 }
 
 .header{
-    color: var(--Text1);
+    color: var(--Text2);
     width: 90%;
     margin: 25px 0;
 }
 .header h1{
-    font-size: 25px;
+    font-size: 16px;
 }
 .grid-container{
     width: 100%;
@@ -219,6 +219,7 @@ header{
     background: var(--Card-BG);
     padding:20px 0px;
     gap: 10px;
+    border-radius: 5px;
 }
 .socialdata .part2row1{
     display: flex;
@@ -265,4 +266,52 @@ footer{
 .social:hover , .socialdata:hover{
     cursor: pointer;
     background: var(--Card-BG-Active);
+}
+
+@media screen and (min-width:600px) {
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    .row1{
+        width: 36%;
+    }
+    .row2{
+        width: 36%;
+        justify-content: flex-end;
+        border: none;
+        gap:0 10px
+    }
+    .container-flex{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0 10px;
+    }
+    .header{
+        width: 82%;
+    }
+    .social{
+        width: 20%;
+    }
+    .grid-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .socialdata{
+        width: 20%;
+        flex-wrap: wrap;
+        gap: 5px 10px;
+    }
+    .socialdata .part2row1{
+        flex-wrap: wrap;
+    }
+    .socialdata .part2row2{
+        flex-wrap: wrap;
+    }
 }
