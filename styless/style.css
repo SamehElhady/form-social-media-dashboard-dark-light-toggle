@@ -3,12 +3,16 @@
     padding: 0;
     font-family: 'Inter', sans-serif;
 }
+p{
+    font-size: 14px;
+}
 
 /*colors of light mode */
 :root{
     --BG: hsl(0, 0%, 100%); 
     --Top-BG-Pattern: hsl(225, 100%, 98%);
     --Card-BG: hsl(227, 47%, 96%);
+    --Card-BG-Active:hsl(228, 23%, 91%);
     --Text1: hsl(228, 12%, 44%); 
     --Text2: hsl(230, 17%, 14%);
 
@@ -18,7 +22,7 @@
     --Lime-Green: hsl(163, 72%, 41%);
     --Bright-Red: hsl(356, 69%, 56%);
     --Facebook: hsl(208, 92%, 53%);
-    --Twitter: hsl(203, 89%, 53%) ; --Instagram: linear-gradient( hsl(37, 97%, 70%) , hsl(329, 70%, 58%));
+    --Twitter: hsl(203, 89%, 53%) ; --Instagram: linear-gradient(to right, hsl(37, 97%, 70%) , hsl(329, 70%, 58%));
     --YouTube: hsl(348, 97%, 39%);
 }
 /*colors of black mode */
@@ -26,12 +30,11 @@
     --BG: hsl(230, 17%, 14%);
     --Top-BG-Pattern: hsl(232, 19%, 15%);
     --Card-BG: hsl(228, 28%, 20%);
+    --Card-BG-Active: rgb(44, 50, 77);
     --Text1: hsl(228, 34%, 66%);
     --Text2: hsl(0, 0%, 100%);
 
     --Toggle: linear-gradient(to right, hsl(210, 78%, 56%) , hsl(146, 68%, 55%) );
-    
-
 }
 body{
     background: linear-gradient( 
@@ -57,4 +60,211 @@ body{
 }
 .toggle-button:hover{
     cursor: pointer;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+header{
+    width: 100%;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.row1{
+    width: 90%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.row1 h1{
+    font-size: 16px;
+    color: var(--Text2);
+    align-self: flex-start;
+}
+.row1 p{
+    font-size: 12px;
+    color: var(--Text1);
+    align-self: flex-start;
+}
+.row2{
+    width: 90%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid var(--Text1);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.row2 p{
+    color: var(--Text1);
+    font-size: 12px;
+}
+.container-flex{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    gap: 15px ;
+}
+.social{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: var(--Card-BG);
+    border-radius: 5px;
+}
+
+.socialrow1{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 0px 10px;
+}
+.socialrow1 img{
+    width: 15px;
+    height: 15px;
+    align-self: center;
+}
+.socialrow1 p{
+    color: var(--Text1);
+    font-size: 10px;
+}
+.socialrow2 p{
+    color: var(--Text2);
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.socialrow3 p{
+    color: var(--Text1);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 10px;
+    margin-bottom: 10px;
+
+}
+.socialrow4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px 10px;
+}
+.socialrow4 img{
+    width: 10px;
+    height: 10px;
+    align-self: center;
+}
+.socialrow4 p{
+    color: var(--Lime-Green);
+    font-size: 10px;
+}
+
+.facebook{
+    border-top: 2px solid var(--Facebook);
+}
+.twitter{
+    border-top: 2px solid var(--Twitter);
+}
+/*to make gradient border*/
+.instagram{
+    position: relative;
+}
+.instagram::after{
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: -1;
+    margin-top: -3px;
+    border-radius: inherit;
+    background-image: var(--Instagram);
+}
+.youtube{
+    border-top: 2px solid var(--YouTube);
+}
+.youtube .socialrow4 p{
+    color: var(--Bright-Red);
+}
+
+.header{
+    color: var(--Text1);
+    width: 90%;
+    margin: 25px 0;
+}
+.header h1{
+    font-size: 25px;
+}
+.grid-container{
+    width: 100%;
+    align-self: center;
+    border: 2px solid snow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+.socialdata{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background: var(--Card-BG);
+    padding:20px 0px;
+    gap: 10px;
+    border-radius: 5px;
+}
+.socialdata .part2row1{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px;
+}
+.socialdata .part2row1 p{
+    color: var(--Text1);
+    font-size: 10px;
+}
+.socialdata .part2row1 img{
+    height: 15px;
+    width: 15px;
+}
+.socialdata .part2row2{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px;
+}
+.socialdata .part2row2 p{
+    color: var(--Text2);
+    font-size: 25px;
+    font-weight: 700;
+}
+.socialdata .part2row2 .percentage {
+    color: var(--Lime-Green);
+    font-size: 10px;
+    align-self: center;
+    display: flex;
+    gap: 0 5px;
+}
+.socialdata .part2row2 .percentage img{
+    width: 10px;
+    height: 10px;
+}
+.socialdata .part2row2 .red {
+    color: var(--Bright-Red);
+}
+
+footer{
+    margin: 30px;
+    color: var(--Text1);
+}
+.social:hover , .socialdata:hover{
+    cursor: pointer;
+    background: var(--Card-BG-Active);
 }

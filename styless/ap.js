@@ -16,7 +16,7 @@ positionLight=140;
 toggle.addEventListener("click",(e)=>{
     const test=document.documentElement.classList;
     test.toggle("dark");
-     ball.style.transition="0.5s";
+    ball.style.transition="0.5s";
     if(test.contains("dark")){
     localStorage.setItem("theme","dark");
     setPositionBall(positionDark);
